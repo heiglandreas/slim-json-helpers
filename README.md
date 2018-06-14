@@ -21,7 +21,6 @@ use Slim\Http\Request as Request;
 use JsonHelpers\Renderer as JsonRenderer;
 
 $app = new \Slim\App($settings);
-$container = $app->getContainer();
 
 // register the json response and error handlers
 $jsonHelpers = new JsonHelpers\JsonHelpers($app->getContainer());
