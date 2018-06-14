@@ -4,8 +4,7 @@ A clone of the removed aporat/slim-json-helpers
 
 [![Latest Stable Version](https://poser.pugx.org/org_heigl/slim-json-helpers/version.png)](https://packagist.org/packages/org_heigl/slim-json-helpers)
 [![Composer Downloads](https://poser.pugx.org/org_heigl/slim-json-helpers/d/total.png)](https://packagist.org/packages/org_heigl/slim-json-helpers)
-[![Build Status](https://travis-ci.org/heiglandreas/slim-json-helpers.png?branch=master)](https://travis-ci.org/heiglandreas/slim-json-helpers)
-[![Code Coverage](https://scrutinizer-ci.com/g/heiglandreas/slim-json-helpers/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/heiglandreas/slim-json-helpers/?branch=master)
+[![Build Status](https://travis-ci.com/heiglandreas/slim-json-helpers.svg?branch=master)](https://travis-ci.com/heiglandreas/slim-json-helpers)[![Code Coverage](https://scrutinizer-ci.com/g/heiglandreas/slim-json-helpers/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/heiglandreas/slim-json-helpers/?branch=master)
 [![License](https://poser.pugx.org/heiglandreas/slim-json-helpers/license.svg)](https://packagist.org/packages/org_heigl/slim-json-helpers)
 
 
