@@ -1,0 +1,37 @@
+{
+  "name" : "org_heigl/slim-json-helpers",
+  "description" : "Clone of aporat/slim-json-helpers | Slim3 JSON Request & Response Helpers",
+  "type" : "library",
+  "authors" : [{
+    "name" : "Adar Porat",
+    "email" : "adar.porat@gmail.com",
+    "homepage" : "http://github.com/aporat"
+  }
+  ],
+  "keywords" : [
+    "slim",
+    "json"
+  ],
+  "homepage" : "https://github.com/heiglandreas/slim-json-helpers",
+  "license" : [
+    "Apache-2.0"
+  ],
+  "replace" : "aporat/slim-json-helpers",
+  "conflict" : "aporat/slim-json-helpers",
+  "require" : {
+    "php" : ">=5.5",
+    "slim/slim": "~3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "JsonHelpers\\": "src/"
+    }
+  },
+  "support" : {
+    "email" : "andreas@heigl.org",
+    "issues" : "https://github.com/heiglandreas/slim-json-helpers/issues"
+  }
+}
