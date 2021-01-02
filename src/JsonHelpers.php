@@ -1,7 +1,7 @@
 <?php
 namespace JsonHelpers;
 
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use JsonHelpers\Renderer as JsonRenderer;
 use InvalidArgumentException;
 
