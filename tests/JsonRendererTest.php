@@ -1,8 +1,10 @@
 <?php
+
+namespace JsonHelpersTest;
+
 use JsonHelpers\Renderer as Renderer;
 use PHPUnit\Framework\TestCase;
-use \Slim\Http\Response;
-
+use Slim\Http\Response;
 
 class JsonRendererTest extends TestCase
 {
@@ -23,5 +25,4 @@ class JsonRendererTest extends TestCase
         $this->assertTrue($response->getStatusCode() == 200);
         $this->assertTrue($response->getBody() == json_encode(['status' => 'ok']));
     }
-
 }

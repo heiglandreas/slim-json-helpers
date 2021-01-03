@@ -19,8 +19,8 @@ class Renderer
    *
    * @return ResponseInterface
    */
-  public function render(Response $response, array $data = [], $status = 200)
-  {
-    return $response->withJson($data, $status);
-  }
+    public function render(Response $response, array $data = [], $status = 200)
+    {
+        return $response->withJson($data, $status);
+    }
 }
