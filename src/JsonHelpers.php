@@ -5,7 +5,8 @@ use Psr\Container\ContainerInterface;
 use JsonHelpers\Renderer as JsonRenderer;
 use InvalidArgumentException;
 
-class JsonHelpers {
+class JsonHelpers
+{
 
     /**
      * Container
