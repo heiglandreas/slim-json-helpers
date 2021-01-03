@@ -1,18 +1,21 @@
 <?php
+
+namespace JsonHelpersTest;
+
 use JsonHelpers\Renderer as Renderer;
-use \Slim\Http\Response;
+use PHPUnit\Framework\TestCase;
+use Slim\Http\Response;
 
-
-class JsonRendererTest extends \PHPUnit_Framework_TestCase
+class JsonRendererTest extends TestCase
 {
-    public function testValidConstuctor()
+    public function testValidConstuctor(): void
     {
         $jsonRenderer = new Renderer();
 
         $this->assertInstanceOf('\JsonHelpers\Renderer', $jsonRenderer);
     }
 
-    public function testValidResponse()
+    public function testValidResponse(): void
     {
         $jsonRenderer = new Renderer();
 
@@ -22,5 +25,4 @@ class JsonRendererTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($response->getStatusCode() == 200);
         $this->assertTrue($response->getBody() == json_encode(['status' => 'ok']));
     }
-
 }

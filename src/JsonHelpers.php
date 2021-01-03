@@ -5,7 +5,8 @@ use Psr\Container\ContainerInterface;
 use JsonHelpers\Renderer as JsonRenderer;
 use InvalidArgumentException;
 
-class JsonHelpers {
+class JsonHelpers
+{
 
     /**
      * Container
@@ -21,7 +22,8 @@ class JsonHelpers {
     /**
      * Create new application
      *
-     * @param ContainerInterface|array $container Either a ContainerInterface or an associative array of application settings
+     * @param ContainerInterface|array $container Either a ContainerInterface or an associative array
+     *   of application settings
      * @throws InvalidArgumentException when no container is provided that implements ContainerInterface
      */
     public function __construct($container = null)
@@ -35,7 +37,7 @@ class JsonHelpers {
     /**
      * register json response view
      */
-    function registerResponseView()
+    public function registerResponseView()
     {
 
         $this->container['view'] = function ($c) {
@@ -48,14 +50,20 @@ class JsonHelpers {
     /**
      * register all error handler (not found, not allowed, and generic error handler)
      */
-    function registerErrorHandlers() {
+    public function registerErrorHandlers()
+    {
 
         $this->container['notAllowedHandler'] = function ($c) {
             return function ($request, $response, $methods) use ($c) {
 
                 $view = new JsonRenderer();
-                return $view->render($response,
-                    ['error_code' => 'not_allowed', 'error_message' => 'Method must be one of: ' . implode(', ', $methods), 405]
+                return $view->render(
+                    $response,
+                    [
+                        'error_code' => 'not_allowed',
+                        'error_message' => 'Method must be one of: ' . implode(', ', $methods)
+                    ],
+                    405
                 );
             };
         };
@@ -64,7 +72,14 @@ class JsonHelpers {
             return function ($request, $response) use ($c) {
                 $view = new JsonRenderer();
 
-                return $view->render($response, ['error_code' => 'not_found', 'error_message' => 'Not Found'], 404);
+                return $view->render(
+                    $response,
+                    [
+                        'error_code' => 'not_found',
+                        'error_message' => 'Not Found'
+                    ],
+                    404
+                );
             };
         };
 
